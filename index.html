@@ -3,29 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] - Portfolio</title>
+    <title>Joe Sanjo Cijo - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Aesthetic Background Shapes -->
+    <div class="background-shapes">
+        <svg class="shape shape-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="purpleGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#A855F7;stop-opacity:0.1" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="80" fill="url(#purpleGradient1)" />
+        </svg>
+        <svg class="shape shape-2" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="purpleGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:#9333EA;stop-opacity:0.05" />
+                </linearGradient>
+            </defs>
+            <polygon points="150,50 250,150 150,250 50,150" fill="url(#purpleGradient2)" />
+        </svg>
+        <svg class="shape shape-3" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="purpleGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#A855F7;stop-opacity:0.15" />
+                    <stop offset="100%" style="stop-color:#C084FC;stop-opacity:0.05" />
+                </linearGradient>
+            </defs>
+            <ellipse cx="125" cy="125" rx="100" ry="60" fill="url(#purpleGradient3)" />
+        </svg>
+        <div class="floating-dots">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+            <div class="dot dot-4"></div>
+            <div class="dot dot-5"></div>
+            <div class="dot dot-6"></div>
+        </div>
+    </div>
+    
     <header>
         <nav>
-            <div class="logo">[Your Logo]</div>
+            <div class="logo">Joe Sanjo Cijo</div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="hero">
-            <div class="hero-text animated-element">
-                <h1>Joe Sanjo Cijo</h1>
-                <p>Software Developer and Web designer</p>
-            </div>
-            <div class="hero-image-placeholder animated-element">
-                <span>Your Photo Here</span>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span>Available for opportunities</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Hi, I'm</span>
+                        <span class="title-name">Joe Sanjo Cijo</span>
+                        <span class="title-role">Full-Stack Developer</span>
+                    </h1>
+                    <p class="hero-description">Passionate about creating innovative solutions at the intersection of IoT, AI, and cybersecurity. Turning ideas into reality with code.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Passion</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-image-placeholder">
+                        <img src="resources/joe_main.jpg" alt="Joe Sanjo Cijo">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="tech-badge tech-badge-1">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-badge tech-badge-2">
+                            <span>IoT</span>
+                        </div>
+                        <div class="tech-badge tech-badge-3">
+                            <span>AI/ML</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -33,9 +142,20 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-image-placeholder">
-                    <span>Another Photo or Graphic</span>
+                    <img src="resources/about-img.png" alt="About Image">
                 </div>
-                <p>[Placeholder for your bio. Describe your skills, passion, and background here. Keep it engaging and concise to hold the visitor's attention.]</p>
+                <div class="about-text">
+                    <p class="about-intro">I'm a full-stack developer passionate about IoT, AI, and cybersecurity, currently pursuing my Bachelor of Computer Applications at Kristu Jayanti College.</p>
+                    <p>During my internship, I modernized an RFID management system by integrating microcontrollers with Flask servers, gaining hands-on experience in end-to-end system development. My projects include a malware scanning mobile app, an AI-powered smart home system for Google Solution Challenge 2024, and an Agri-IoT platform that improved farming efficiency in Karnataka.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">IoT Hardware</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">AI/ML</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -43,19 +163,25 @@
             <h2>My Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <div class="project-image-placeholder"><span>Project Image</span></div>
-                    <h3>Project One</h3>
-                    <p>[Brief description of project one.]</p>
+                    <div class="project-image-placeholder">
+                        <img src="resources/agri-image.png" alt="Smart Agri App">
+                    </div>
+                    <h3>Smart Agri App</h3>
+                    <p>A Flask-based web application for agriculture image classification using ResNet. Features ESP32 hardware integration for remote monitoring and real-time image predictions. Built with Python, HTML, and CSS for a comprehensive agricultural solution.</p>
                 </div>
                 <div class="project-card">
-                    <div class="project-image-placeholder"><span>Project Image</span></div>
-                    <h3>Project Two</h3>
-                    <p>[Brief description of project two.]</p>
+                    <div class="project-image-placeholder">
+                        <img src="resources/Lumos-image.png" alt="LumosAI_">
+                    </div>
+                    <h3>LumosAI_</h3>
+                    <p>An open-source AI and IoT project featuring voice-controlled home automation. Integrates speech recognition with ESP8266 modules for remote light control. Includes custom hotword training, web interface, and real-time voice command processing for smart home applications.</p>
                 </div>
                 <div class="project-card">
-                    <div class="project-image-placeholder"><span>Project Image</span></div>
-                    <h3>Project Three</h3>
-                    <p>[Brief description of project three.]</p>
+                    <div class="project-image-placeholder">
+                        <img src="resources/sentinel-image.png" alt="SentinelApp">
+                    </div>
+                    <h3>SentinelApp</h3>
+                    <p>A comprehensive Android malware scanner with real-time file and URL scanning using VirusTotal API. Features modern Material Design UI, Lottie animations, interactive pie charts, and Firebase authentication. Built with Kotlin for robust security analysis.</p>
                 </div>
             </div>
         </section>
@@ -72,7 +198,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+        <p>&copy; 2025 Joe Sanjo Cijo. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
