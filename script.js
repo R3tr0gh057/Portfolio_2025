@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Intersection Observer for animations
+    // Intersection Observer for scroll-triggered animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -42,13 +42,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                const element = entry.target;
+                
+                // Add animation class based on element type
+                if (element.classList.contains('animated-section')) {
+                    element.classList.add('section-visible');
+                    
+                    // Animate child elements with staggered delay
+                    const children = element.querySelectorAll('.project-card, .about-content, .hero-stats, .hero-actions, .hero-highlights, .skills-grid');
+                    children.forEach((child, index) => {
+                        setTimeout(() => {
+                            child.classList.add('element-visible');
+                        }, index * 150); // 150ms delay between each element
+                    });
+                } else if (element.classList.contains('animated-element')) {
+                    element.classList.add('element-visible');
+                }
+                
+                // Unobserve after animation to prevent re-triggering
+                observer.unobserve(element);
             }
         });
     }, observerOptions);
     
-    // Observe animated elements
+    // Observe all animated elements and sections
     const animatedElements = document.querySelectorAll('.animated-element, .animated-section');
     animatedElements.forEach(el => {
         observer.observe(el);

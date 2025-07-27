@@ -62,6 +62,13 @@ body {
     position: relative;
 }
 
+a:focus {
+        outline: none;
+        -webkit-tap-highlight-color: transparent; /* Removes tap highlight on mobile */
+        text-decoration: none; 
+        color: inherit;
+    }
+
 /* Aesthetic Background Shapes */
 .background-shapes {
     position: fixed;
@@ -1019,8 +1026,87 @@ footer {
 
 .animated-element, .animated-section {
     opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.element-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.section-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Staggered animations for project cards */
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card.element-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About section animations */
+.about-content {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-content.element-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hero elements animations */
+.hero-stats, .hero-actions, .hero-highlights {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-stats.element-visible, .hero-actions.element-visible, .hero-highlights.element-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills grid animation */
+.skills-grid {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-grid.element-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Individual skill tags animation */
+.skill-tag {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-grid.element-visible .skill-tag {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger skill tags */
+.skills-grid.element-visible .skill-tag:nth-child(1) { transition-delay: 0.1s; }
+.skills-grid.element-visible .skill-tag:nth-child(2) { transition-delay: 0.2s; }
+.skills-grid.element-visible .skill-tag:nth-child(3) { transition-delay: 0.3s; }
+.skills-grid.element-visible .skill-tag:nth-child(4) { transition-delay: 0.4s; }
+.skills-grid.element-visible .skill-tag:nth-child(5) { transition-delay: 0.5s; }
+.skills-grid.element-visible .skill-tag:nth-child(6) { transition-delay: 0.6s; }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
